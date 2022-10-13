@@ -51,7 +51,17 @@ if (number <= 100) {
 }
 
 //Letter Grade
-let grade;
-if(grade >90){
-    console.log('A')
-}else if(grade )
+let grade = 89;
+
+/*if(grade >= 90) {{
+    console.log('A');
+} if (grade >-80 && < 90) {
+    console.log("B");
+    } else if (grade >-70 && < 80) {
+    console.log("C");
+    } else if (grade >-55 && < 70) {
+    console.log("D");
+} else (grade > 55) {
+  console.log("F");
+}
+}*/
