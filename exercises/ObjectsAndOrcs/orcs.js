@@ -103,31 +103,132 @@
 //     return newPlayer
 //   }
 
-class Character {
-    constructor(name, age, eyes, hair, lovesCats = false, lovesDogs) {
-        this.legs = 2;
-        this.arms = 2;
-        this.name = name;
-        this.age = age;
-        this.eyes = eyes;
-        this.hair = hair;
-        this.lovesCats = lovesCats;
-        this.lovesDogs = lovesDogs;
+// class Character {
+//     constructor(name, age, eyes, hair, lovesCats = false, lovesDogs) {
+//         this.legs = 2;
+//         this.arms = 2;
+//         this.name = name;
+//         this.age = age;
+//         this.eyes = eyes;
+//         this.hair = hair;
+//         this.lovesCats = lovesCats;
+//         this.lovesDogs = lovesDogs;
+//     }
+//     setHair(hairColor) {
+//         this.hair = hairColor;
+//     }
+//     greet(otherCharacter) {
+//         console.log("hi " + otherCharacter + "!");
+//     }
+//     classyGreeting (otherClassyCharacter) {
+//         console.log('Greetings ' + otherClassyCharacter.name + '!');
+//       }
+//     smite() {
+//         console.log('I smite thee you vile person')
+//     }
+// }
+
+// const p1 =new Character('Calla', 458, "blue", 'teal', true, true);
+// const enemy = new Character('Death', 666, 'red');
+
+// console.log(p1.greet("bob"));
+// console.log(p1.smite());
+
+// // console.log(enemy.greet("sauron"));
+
+// console.log(p1);
+// p1.setHair('pink');
+// console.log(p1);
+
+// console.log(enemy.classyGreeting(p1));
+// console.log(enemy);
+
+// class Character {
+//     constructor (name, age, eyes, hair, lovesCats = true, lovesDogs) {
+//       this.legs = 2;
+//       this.arms = 2;
+//       this.name = name;
+//       this.age = age;
+//       this.eyes = eyes;
+//       this.hair = hair;
+//       this.lovesCats = lovesCats;
+//       this.lovesDogs = lovesDogs || true;
+//     }
+//     greet (otherCharacter) {
+//       console.log('hi ' + otherCharacter + '!');
+//     }
+//     classyGreeting (otherClassyCharacter) {
+//       console.log('Howdy ' + otherClassyCharacter.name + '!');
+//     }
+//     setHair (hairColor) {
+//       this.hair = hairColor;
+//     }
+//     smite () {
+//       console.log('i smited thee.');
+//     }
+  
+//   }
+
+
+//   class Hobbit extends Character {
+//     constructor(name, age, eyes, hair) {
+//         super( name, age, eyes, hair);
+//         this.skills = ['thievery', 'speed', 'willpower']
+//     }
+//     steal () {
+//         console.log("let's get away");
+//     }
+//     greet (otherCharacter) {
+//         console.log(`Hobbit says hello to ${otherCharacter}`)
+//     }
+//     smite() {
+//         super.smite();
+//         this.steal();
+//         console.log('another one')
+//     }
+//   }
+//   const frodo = new Hobbit('Mr Baggins', 33, 'brown', 'black')
+// console.log(frodo);
+// console.log(frodo.smite());
+// console.log(frodo.steal());
+// console.log(frodo.greet('Sam'));
+
+class Car {
+    constructor (maker, serialNumber) {
+      this.serialNumber = serialNumber;
+      this.maker = maker
     }
-    greet(otherCharacter) {
-        console.log("hi " + otherCharacter + "!");
+    drive () {
+      console.log('Vroom Vroom');
     }
-    smite() {
-        console.log('I smite thee you vile person')
-    }
+  }
+
+
+class Factory {
+    constructor (company) {
+        this.company = company;
+        this.cars = [];
+      }
+generateCar () {
+    const newCar = new Car(this.company, this.cars.length);
+    this.cars.push(newCar);
+  }
+  findCar (index) {
+    return this.cars[index]
+  }
 }
 
-const p1 =new Character('Calla', 458, "blue", 'teal', true, true);
-const enemy = new Character();
 
-console.log(p1.greet("bob"));
-console.log(p1.smite());
+ const tesla = new Factory('tesla');
+ tesla.generateCar();
+ tesla.generateCar();
+ tesla.generateCar();
+ tesla.generateCar();
+ console.log(tesla);
+ console.log(tesla.findCar[0]);
 
-console.log(enemy.greet("sauron"));
-
-console.log(p1)
+const porche = new Factory('Porche');
+porche.generateCar();
+porche.generateCar();
+console.log(porche);
+console.log(porche.findCar(0));
